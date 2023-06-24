@@ -1,7 +1,7 @@
 # STM32F103C8T6_PID_Motor
 ## Created 06/24/2023
 
-This project aim is to prototype the ability to cooperate multiple different module of MCU STM32F103C8T6 Blue Pill, to control the speed and position of the DC servo motor with an attached encoder, using the PID control method.
+This project aim is to prototype the ability to cooperate multiple different module of MCU STM32F103C8T6 Blue Pill, to control the speed and position of the DC servo motor with an attached encoder, using the PID control method. Besides, to save time for configuration of the modules, I use the HAL library and CubeMX to configure the chip.
 
 In this project, I used the UART - TTL chip to connect the MCU to my PC and send command to control the motor, which the respectively following command
 - '1': 50% maximum speed
@@ -19,7 +19,7 @@ All the PID parameters to control the specific position of the motor shaft are t
 
 Components:
 - MCU STM32F103C8T6 Blue Pill
-- DC servo motor with encoder ( 374 pulse per revolution)
+- DC servo motor with encoder (374 pulse per revolution, PWM frequency 2000Hz)
 - L298N motor driver
 - UART-TTL chip
 
@@ -28,6 +28,11 @@ Components:
 Also, I want to appreciate Mr. Khaled Magdy for creating an incredible serial monitor that helps me alot to debug during this and many other projects of mine.
 
 ![Elite Serial Monitor by Khaled Magdy](https://github.com/HarryNguyen2023/STM32F103C8T6_PID_Motor/assets/136590151/5abdb3b5-8123-47a7-a108-972198d285af)
+
+### Update
+I have successfully update the project to remotely control the motor via Bluetooth using HC-05 Bluetooth IC and Serial Bluetooth Terminal app on my mobilephone
+
+![System with HC-05 Bluetooth IC](https://github.com/HarryNguyen2023/STM32F103C8T6_PID_Motor/assets/136590151/675168f3-6d9c-487b-b208-6748f7bf85c3)
 
 ## References
 1. STMicroelectronics, STM32F10x datasheet.
